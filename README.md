@@ -56,17 +56,10 @@ You need to have Docker and Docker Compose installed in your environment.
     ```bash
     docker-compose up -d
     ```
-4. Open the link in your browser to access the application
-    ```bash
-     http://localhost
-    ```
-    ```bash
-     http://localhost/post
-    ```
+
 ## Running the Application
 
-1. Access the application via `localhost:8080` in your web browser.
-2. Test the application endpoints via Postman or another API development tool.
+1. Access the application via `http://localhost/post` in your web browser.
 
 
 # Packages
