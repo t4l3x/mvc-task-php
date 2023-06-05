@@ -46,7 +46,7 @@ You need to have Docker and Docker Compose installed in your environment.
 
 1. Clone the project
     ```bash
-    git clone https://github.com/username/repository.git
+    git clone 
     ```
 2. Move into the directory
     ```bash
@@ -56,7 +56,13 @@ You need to have Docker and Docker Compose installed in your environment.
     ```bash
     docker-compose up -d
     ```
-
+4. Open the link in your browser to access the application
+    ```bash
+     http://localhost
+    ```
+    ```bash
+     http://localhost/post
+    ```
 ## Running the Application
 
 1. Access the application via `localhost:8080` in your web browser.
