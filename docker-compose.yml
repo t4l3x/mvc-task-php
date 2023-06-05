@@ -17,7 +17,12 @@ services:
       - "9000:9000"
     networks:
       - app-network
-
+  composer_installation:
+    container_name: composer_installation
+    image: composer
+    volumes:
+      - ./:/app
+    command: composer install --ignore-platform-reqs
   nginx:
     build:
       context: ./docker/nginx

@@ -42,7 +42,7 @@ class PostsController extends BaseController
     {
         $postData = $request->getParsedBody();
         if($this->csrf_token->validateCsrfToken($postData['csrf_token']) &&  $this->postService->createPost($postData)){;
-            return $this->redirect('/articles'); // assuming '/home' is the correct path
+            return $this->redirect('/post'); // assuming '/home' is the correct path
         }else{
             return $this->render('error.html.twig', ['error' => 'CSRF token is not valid']);
         }
