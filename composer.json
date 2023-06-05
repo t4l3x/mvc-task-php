@@ -1,0 +1,32 @@
+{
+  "name": "t4l3x/intetics",
+  "description": "home task",
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^10.2"
+  },
+  "license": "mit",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Taleh",
+      "email": "t4lex999@gmail.com"
+    }
+  ],
+  "require": {
+    "psr/http-server-handler": "^1.0",
+    "psr/container": "^2.0",
+    "ext-pdo": "*",
+    "twig/twig": "^3.6",
+    "php-di/php-di": "^7.0",
+    "nikic/fast-route": "^1.3",
+    "nyholm/psr7": "^1.8",
+    "psr/http-factory": "^1.0",
+    "swiftmailer/swiftmailer": "^6.0",
+    "symfony/mailer": "^6.3"
+  }
+}

@@ -1,0 +1,21 @@
+
+
+{% extends 'layout.twig' %}
+
+{% block title %}Home - My Website{% endblock %}
+
+{% block content %}
+    <h2>Welcome to My Website</h2>
+    <p>This is the home page content.</p>
+
+    <form method="POST" action="" enctype="multipart/form-data">
+        <input type="text" name="data" placeholder="Enter data" required>
+        <input type="hidden" name="csrf_token" value="{{  csfr_token }}">
+        <button type="submit">Submit</button>
+    </form>
+    {% for item in posts %}
+        <p>Unique ID: {{ item.unique_id }}</p>
+        <p>Data: {{ item.data }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}
