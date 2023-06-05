@@ -1,6 +1,6 @@
 # My PHP Web Application
 
-This web application is built with PHP, it's containerized using Docker, and employs MySQL for the database. The application supports basic CRUD operations for "posts".
+This web application is built with PHP, it's containerized using Docker, and employs MySQL for the database. The application supports basic operations for "posts". (Based on the task from the company)
 
 ## Table of Contents
 
