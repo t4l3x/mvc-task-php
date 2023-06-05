@@ -60,6 +60,7 @@ You need to have Docker and Docker Compose installed in your environment.
 ## Running the Application
 
 1. Access the application via `http://localhost/post` in your web browser.
+2. Access the email via `http://localhost:8025` in your web browser.
 
 
 # Packages
