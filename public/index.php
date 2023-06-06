@@ -3,11 +3,14 @@
 use App\Core\AppKernel;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
-
+use Dotenv\Dotenv;
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
 $container = require __DIR__ . '/../config/dependencies.php';
 $appRouter = new AppKernel($container);

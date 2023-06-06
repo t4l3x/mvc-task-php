@@ -3,6 +3,7 @@
 namespace App\Core\Notifications;
 
 use App\Core\Services\SwiftMailerService;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
 /**
  * Class EmailNotifier
@@ -13,6 +14,9 @@ readonly class EmailNotifier implements NotifierInterface
 {
     public function __construct(private SwiftMailerService $mailer) {}
 
+    /**
+     * @throws TransportExceptionInterface
+     */
     public function send(Notification $notification): void
     {
         if (!$notification instanceof EmailNotification) {

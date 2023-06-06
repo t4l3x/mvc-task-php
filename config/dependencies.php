@@ -24,7 +24,12 @@ $builder = new ContainerBuilder();
 
 $definitions = [
     PdoConnectionFactory::class => function () {
-        return new PdoConnectionFactory('db', 'post', 'root', '');
+        $dbHost = $_ENV['DB_HOST'];
+        $dbName = $_ENV['DB_NAME'];
+        $dbUser = $_ENV['DB_USER'];
+        $dbPassword = $_ENV['DB_PASSWORD'];
+
+        return new PdoConnectionFactory($dbHost, $dbName, $dbUser, $dbPassword);
     },
     QueryFactory::class => function (ContainerInterface $c) {
         $pdoConnectionFactory = $c->get(PdoConnectionFactory::class);
@@ -47,7 +52,13 @@ $definitions = [
     SwiftMailerService::class => function () {
         // Here you would initialize the SwiftMailerService with necessary parameters
         // I am leaving it blank as I do not know the specific implementation details
-        return new SwiftMailerService('mailpit', 1025, 'username', 'password');
+        $mailHost = $_ENV['MAIL_HOST'];
+        $mailPort = $_ENV['MAIL_PORT'];
+        $mailUsername = $_ENV['MAIL_USERNAME'];
+        $mailPassword = $_ENV['MAIL_PASSWORD'];
+
+        return new SwiftMailerService($mailHost, $mailPort, $mailUsername, $mailPassword);
+
     },
     SomeSmsService::class => function () {
         // Here you would initialize the SomeSmsService with necessary parameters
